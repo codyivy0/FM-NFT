@@ -1,0 +1,124 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+
+:root {
+    --soft-blue: hsl(215, 51%, 70%);
+    --cyan: hsl(178, 100%, 50%);
+    --very-dark-blue-main-bg: hsl(217, 54%, 11%);
+    --very-dark-blue-card-bg: hsl(216, 50%, 16%);
+    --very-dark-blue-line: hsl(215, 32%, 27%);
+    --white: hsl(0, 0%, 100%);
+}
+
+html {
+    font-family: 'Outfit', sans-serif;
+    font-size: 18px;
+    min-height: 100vh;
+    color: white;
+}
+
+body {
+    background-color: var(--very-dark-blue-main-bg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+}
+
+main {
+    box-sizing: border-box; 
+    background-color: var(--very-dark-blue-card-bg);
+    display: flex;
+    flex-direction: column;
+    padding: 1.3rem;
+    width: 18rem;
+    align-self: center;
+    border-radius: 15px;
+}
+.content h1{
+    margin-bottom: 0;
+    font-size: 24px;
+}
+.content h1:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
+.content p{
+    color: var(--soft-blue);
+    font-weight: 300;
+    font-size: 16px;
+}
+.content-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.eth{
+    color: var(--cyan);
+    
+}
+.days-left{
+    color: var(--soft-blue);
+}
+.img-preview {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .img-preview img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+  }
+  
+  .img-preview::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 99%;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .img-preview:hover::before {
+    background-color: hsl(178, 100%, 50%);
+    opacity: 0.5;
+    border-radius: 15px;
+  }
+  
+  .img-preview:hover::after {
+    content: url(./images/icon-view.svg);
+    position: absolute;
+    top: 42%;
+    left: 42%;
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+.footer{
+    border-top: 1px solid var(--very-dark-blue-line);
+    margin-top: 1rem;
+    color: var(--soft-blue);
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: .5rem;
+}
+.footer img{
+    max-width: 10%;
+    height: auto;
+    border: 1px solid white;
+    border-radius: 50px;
+}
+.footer span{
+    color: white;
+}
+#span:hover{
+    color: var(--cyan);
+    cursor: pointer;
+}
